@@ -32,7 +32,7 @@ namespace RegistroVotantes.Domain.Tests
             bool tieneEdadPermitida = svv.TieneEdadMinimaPermitida(votanteConEdadPermitida.FechaDeNacimiento);
 
             // Assert
-            Assert.AreEqual(true, tieneEdadPermitida);
+            Assert.IsTrue(tieneEdadPermitida);
         }
 
         // Assert

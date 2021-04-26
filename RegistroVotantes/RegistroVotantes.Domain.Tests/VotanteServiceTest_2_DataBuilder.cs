@@ -29,7 +29,7 @@ namespace RegistroVotantes.Domain.Tests
             var tieneNacionalidadPermitida = svv.TieneNacionalidadPermitida(votanteValido.Nacionalidad);
 
             // Assert
-            Assert.AreEqual(true, tieneNacionalidadPermitida);
+            Assert.IsTrue(tieneNacionalidadPermitida);
         }
 
         // Assert

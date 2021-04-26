@@ -33,9 +33,9 @@ namespace RegistroVotantes.Domain.Services
             return await _VotanteRepository.GetAsync(filter, includeObjectProperties: x => x.Nacionalidad).ConfigureAwait(false);
         }
 
-        public async Task<Votante> SaveVotanteAsync(Votante votante)
+        public async Task<Votante> SaveVotanteAsync(Votante v)
         {
-            return await _VotanteRepository.AddAsync(votante).ConfigureAwait(false);
+            return await _VotanteRepository.AddAsync(v).ConfigureAwait(false);
         }
     }
 }

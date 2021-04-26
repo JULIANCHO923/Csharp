@@ -29,5 +29,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RegistroVotantes.Api\RegistroVotantes.Api.csproj" />
+    <ProjectReference Include="..\RegistroVotantes.Domain.Tests\RegistroVotantes.Domain.Tests.csproj" />
   </ItemGroup>
 </Project>

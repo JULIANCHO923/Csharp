@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RegistroVotantes.Domain.Entities;
+using RegistroVotantes.Domain.Tests.TestDataBuilder;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -17,15 +18,11 @@ namespace RegistroVotantes.Api.Test
         }
 
         [TestMethod]
-        public void PostPersonSuccess()
+        public void CuandoSolicitudPostVotanteValidoEntoncesVotanteRegistradoSatisfactoriamente()
         {
-            var votante = new
-            {
-                FechaDeNacimiento = DateTime.Now.AddYears(-30),
-                Nacionalidad = "Colombiano"
-            };
+            Votante votanteValido = new VotanteTestDataBuilder().ConValoresDePrueba().Build();
 
-            var c = this.TestClient.PostAsync("api/votantes", votante, new JsonMediaTypeFormatter()).Result;
+            var c = this.TestClient.PostAsync("api/votantes", votanteValido, new JsonMediaTypeFormatter()).Result;
             c.EnsureSuccessStatusCode();
             Assert.AreEqual(HttpStatusCode.OK, c.StatusCode);
         }

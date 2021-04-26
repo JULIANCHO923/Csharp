@@ -3,7 +3,7 @@ using System;
 
 namespace RegistroVotantes.Domain.Tests.TestDataBuilder
 {
-    internal class VotanteTestDataBuilder
+    public class VotanteTestDataBuilder
     {
         public string Nacionalidad;
 
