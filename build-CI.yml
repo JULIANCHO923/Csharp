@@ -5,16 +5,16 @@ trigger:
 
 variables:
  - name: BuildPlatform
- - value: 'Any CPU'
+   value: 'Any CPU'
  - name: BuildConfiguration
- - value: Release
+   value: Release
 
 jobs:
 - job: Phase_1
   displayName: 'Integración Continua'
   cancelTimeoutInMinutes: 1
   pool:
-    vmImage: 'ubuntu-latest'
+    vmImage: 'windows-latest'
 
   steps:
   - checkout: self
