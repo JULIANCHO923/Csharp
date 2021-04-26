@@ -28,7 +28,7 @@ namespace RegistroVotantes.Domain.Tests
 
 
 
-        Convertir en Data Builder
+        //Convertir en Data Builder
         [TestMethod]        
         public void EsNAcionalExitoso()
         {

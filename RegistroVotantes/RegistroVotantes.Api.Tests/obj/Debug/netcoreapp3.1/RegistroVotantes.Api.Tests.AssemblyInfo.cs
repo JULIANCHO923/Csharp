@@ -11,7 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RegistroVotantes.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "c:\\Users\\julian.henao\\Desktop\\RegistroVotantes\\RegistroVotantes\\RegistroVotantes." +
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("RegistroVotantes.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\julian.henao\\Desktop\\RegistroVotantes\\RegistroVotantes\\RegistroVotantes." +
     "Api", "RegistroVotantes.Api.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("RegistroVotantes.Api.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
