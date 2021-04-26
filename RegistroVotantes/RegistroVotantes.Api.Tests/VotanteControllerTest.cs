@@ -20,7 +20,7 @@ namespace RegistroVotantes.Api.Test
         [TestMethod]
         public void CuandoSolicitudPostVotanteValidoEntoncesVotanteRegistradoSatisfactoriamente()
         {
-            Votante votanteValido = new VotanteTestDataBuilder().ConValoresDePrueba().Build();
+            Votante votanteValido = new VotanteTestDataBuilder().ConValoresPorDefecto().Construir();
 
             var c = this.TestClient.PostAsync("api/votantes", votanteValido, new JsonMediaTypeFormatter()).Result;
             c.EnsureSuccessStatusCode();
