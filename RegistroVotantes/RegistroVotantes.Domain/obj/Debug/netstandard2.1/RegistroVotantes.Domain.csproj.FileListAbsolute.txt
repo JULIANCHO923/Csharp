@@ -1,9 +1,9 @@
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\bin\Debug\netstandard2.1\RegistroVotantes.Domain.deps.json
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\bin\Debug\netstandard2.1\RegistroVotantes.Domain.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\bin\Debug\netstandard2.1\RegistroVotantes.Domain.pdb
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\obj\Debug\netstandard2.1\RegistroVotantes.Domain.csprojAssemblyReference.cache
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\obj\Debug\netstandard2.1\RegistroVotantes.Domain.AssemblyInfoInputs.cache
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\obj\Debug\netstandard2.1\RegistroVotantes.Domain.AssemblyInfo.cs
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\obj\Debug\netstandard2.1\RegistroVotantes.Domain.csproj.CoreCompileInputs.cache
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\obj\Debug\netstandard2.1\RegistroVotantes.Domain.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\obj\Debug\netstandard2.1\RegistroVotantes.Domain.pdb
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\obj\Debug\netstandard2.1\RegistroVotantes.Domain.csprojAssemblyReference.cache

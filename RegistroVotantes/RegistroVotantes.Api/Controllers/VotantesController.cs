@@ -1,6 +1,6 @@
-﻿using RegistroVotantes.Domain.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
+using RegistroVotantes.Domain.Entities;
 using RegistroVotantes.Domain.Services;
-using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
@@ -12,27 +12,17 @@ namespace RegistroVotantes.Api.Controllers
     [ApiController]
     public class VotantesController : ControllerBase
     {
-
-        readonly ServicioValidacionVotante _srv;
+        private readonly ServicioValidacionVotante _srv;
 
         public VotantesController(ServicioValidacionVotante srv)
         {
             _srv = srv;
         }
 
-   
-        // POST api/<VotantesController>
         [HttpPost]
         public async Task<Object> RegistroVotante([FromBody] Votante v)
         {
             return await _srv.RegistrarVotante(v);
         }
-/*
-        [HttpGet("{id}")]
-        public async Task<Application.Person.PersonDto> GetById(Guid id)
-        {
-            return await _Mediator.Send(new Application.Person.PersonQuery(id));
-        }
-*/
     }
 }

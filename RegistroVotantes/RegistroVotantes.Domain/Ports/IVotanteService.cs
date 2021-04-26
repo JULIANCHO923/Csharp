@@ -9,7 +9,7 @@ namespace RegistroVotantes.Domain.Ports
     public interface IVotanteService
     {
         Task<IEnumerable<Votante>> FindVotanteAsync(Expression<Func<Votante, bool>> filter);
+
         Task<Votante> SaveVotanteAsync(Votante v);
     }
-
 }

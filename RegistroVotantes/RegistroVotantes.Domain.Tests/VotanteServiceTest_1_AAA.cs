@@ -1,17 +1,15 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RegistroVotantes.Domain.Entities;
 using RegistroVotantes.Domain.Services;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-
 
 namespace RegistroVotantes.Domain.Tests
 {
     [TestClass]
     public class VotanteServiceTest_1_AAA
     {
-
-        ServicioValidacionVotante svv;
-        Constantes constantes;
+        private ServicioValidacionVotante svv;
+        private Constantes constantes;
 
         [TestInitialize]
         public void Initialize()
@@ -21,36 +19,35 @@ namespace RegistroVotantes.Domain.Tests
         }
 
         [TestMethod]
-        public void CuandoVotantoEsMayorOIgualDe18YNacionalidadEsColombianoEntoncesValidacionRetornaVerdadero()
+        public void CuandoVotanteTieneEdadPermitidaEntoncesValidacionDeEdadRetornaVerdadero()
         {
             // Arrange
-            var votanteMayor = new Votante
+            var votanteConEdadPermitida = new Votante
             {
                 FechaDeNacimiento = DateTime.Now.AddYears(-20),
                 Nacionalidad = "Colombiano"
             };
 
             // Act
-            var resultado = svv.EdadMinima(votanteMayor.FechaDeNacimiento);
+            bool tieneEdadPermitida = svv.TieneEdadMinimaPermitida(votanteConEdadPermitida.FechaDeNacimiento);
 
             // Assert
-            Assert.AreEqual(true, resultado);
+            Assert.AreEqual(true, tieneEdadPermitida);
         }
 
         // Assert
         [TestMethod, ExpectedException(typeof(Exception))]
-        public void CuandoVotanteNoEsMayorDeEdadSistemaRespondeConExcepcion()
+        public void CuandoVotanteNoTieneEdadPermitidaEntoncesValidacionDeEdadRetornaExcepcion()
         {
             // Arrange
-            var votanteMayor = new Votante
+            var votanteMenorEdadPermitida = new Votante
             {
                 FechaDeNacimiento = DateTime.Now,
                 Nacionalidad = "Colombiano"
             };
 
             // Act
-            svv.EdadMinima(votanteMayor.FechaDeNacimiento);
+            svv.TieneEdadMinimaPermitida(votanteMenorEdadPermitida.FechaDeNacimiento);
         }
-        
     }
 }

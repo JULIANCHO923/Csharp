@@ -1,7 +1,3 @@
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.csprojAssemblyReference.cache
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.AssemblyInfoInputs.cache
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.AssemblyInfo.cs
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.csproj.CoreCompileInputs.cache
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\bin\Debug\netcoreapp3.1\RegistroVotantes.Api.exe
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
@@ -505,6 +501,10 @@ C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\bin\Debug\netcoreapp3.1\RegistroVotantes.Api.pdb
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\bin\Debug\netcoreapp3.1\RegistroVotantes.Domain.pdb
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\bin\Debug\netcoreapp3.1\RegistroVotantes.Infrastructure.pdb
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.csprojAssemblyReference.cache
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.AssemblyInfoInputs.cache
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.AssemblyInfo.cs
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.csproj.CoreCompileInputs.cache
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.csproj.CopyComplete
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api.Tests\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.Tests.pdb

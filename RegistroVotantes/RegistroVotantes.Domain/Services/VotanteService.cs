@@ -1,9 +1,7 @@
 ﻿using RegistroVotantes.Domain.Entities;
 using RegistroVotantes.Domain.Ports;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -35,11 +33,9 @@ namespace RegistroVotantes.Domain.Services
             return await _VotanteRepository.GetAsync(filter, includeObjectProperties: x => x.Nacionalidad).ConfigureAwait(false);
         }
 
-        public async Task<Votante> SaveVotanteAsync(Votante p)
+        public async Task<Votante> SaveVotanteAsync(Votante votante)
         {
-            return await _VotanteRepository.AddAsync(p).ConfigureAwait(false);
+            return await _VotanteRepository.AddAsync(votante).ConfigureAwait(false);
         }
-
     }
 }
-

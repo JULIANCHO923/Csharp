@@ -1,17 +1,16 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RegistroVotantes.Domain.Entities;
 using RegistroVotantes.Domain.Services;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RegistroVotantes.Domain.Tests.TestDataBuilder;
 using System;
-
 
 namespace RegistroVotantes.Domain.Tests
 {
     [TestClass]
     public class VotanteServiceTest_2_DataBuilder
     {
-
-        ServicioValidacionVotante svv;
-        Constantes constantes;
+        private ServicioValidacionVotante svv;
+        private Constantes constantes;
 
         [TestInitialize]
         public void Initialize()
@@ -20,39 +19,28 @@ namespace RegistroVotantes.Domain.Tests
             svv = new ServicioValidacionVotante(constantes);
         }
 
-
-
-        //Convertir en Data Builder
-        [TestMethod]        
-        public void EsNAcionalExitoso()
+        [TestMethod]
+        public void CuandoVotanteTieneNacionalidadPermitidaEntoncesValidacionDeNacionalidadRetornaVerdadero()
         {
-            var votanteMayor = new Votante
-            {
-                FechaDeNacimiento = DateTime.Now.AddYears(-20),
-                Nacionalidad = "Colombiano"
-            };
+            // Arrange
+            Votante votanteValido = new VotanteTestDataBuilder().ConValoresDePrueba().Build();
 
-            var puedeVotarPorNacionalidad = svv.EsNacional(votanteMayor.Nacionalidad);
-            Assert.AreEqual(true, puedeVotarPorNacionalidad);
+            // Act
+            var tieneNacionalidadPermitida = svv.TieneNacionalidadPermitida(votanteValido.Nacionalidad);
+
+            // Assert
+            Assert.AreEqual(true, tieneNacionalidadPermitida);
         }
 
-
+        // Assert
         [TestMethod, ExpectedException(typeof(Exception))]
-        public void EsNacionalError()
+        public void CuandoVotanteNoTieneNacionalidadPermitidaEntoncesValidacionDeNacionalidadRetornaExcepcion()
         {
-            var votanteMayor = new Votante
-            {
-                FechaDeNacimiento = DateTime.Now,
-                Nacionalidad = "Venezolano"
-            };
+            // Arrange
+            Votante votanteNoValido = new VotanteTestDataBuilder().ConValoresDePrueba().ConNacionalidad("Español").Build();
 
-            var resultado =  svv.EsNacional(votanteMayor.Nacionalidad);
+            // Act
+            svv.TieneNacionalidadPermitida(votanteNoValido.Nacionalidad);
         }
-
-
-
-
-
-
     }
 }

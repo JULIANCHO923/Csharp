@@ -1,27 +1,22 @@
-﻿using RegistroVotantes.Domain.Entities;
-using RegistroVotantes.Domain.Ports;
-using RegistroVotantes.Infrastructure;
-using Microsoft.AspNetCore.Mvc.Testing;
+﻿using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using RabbitMQ.Client;
+using RegistroVotantes.Infrastructure;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 
-namespace Api.Test
+namespace RegistroVotantes.Api.Test
 {
     public class IntegrationTestBuilder : IDisposable
     {
         protected HttpClient TestClient;
-        private IServiceProvider _serviceProvider;
         private bool Disposed;
 
         protected void BootstrapTestingSuite()
         {
             Disposed = false;
-          
+
             var appFactory = new WebApplicationFactory<RegistroVotantes.Api.Startup>()
                 .WithWebHostBuilder(builder =>
                 {
@@ -38,16 +33,11 @@ namespace Api.Test
                         {
                             options.UseInMemoryDatabase("TestDb");
                         });
-
-                       
                     });
-
-
                 });
 
-                
             TestClient = appFactory.CreateClient();
-        }      
+        }
 
         public void Dispose()
         {
@@ -67,7 +57,5 @@ namespace Api.Test
 
             Disposed = true;
         }
-
-
     }
 }

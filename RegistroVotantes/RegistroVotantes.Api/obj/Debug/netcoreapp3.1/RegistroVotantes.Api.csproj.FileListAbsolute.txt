@@ -1,8 +1,3 @@
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.csprojAssemblyReference.cache
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.AssemblyInfoInputs.cache
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.AssemblyInfo.cs
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.csproj.CoreCompileInputs.cache
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\RegistroVotantes.Api.exe
@@ -157,6 +152,12 @@ C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\RegistroVotantes.Infrastructure.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\RegistroVotantes.Domain.pdb
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\RegistroVotantes.Infrastructure.pdb
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.csprojAssemblyReference.cache
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.AssemblyInfoInputs.cache
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.AssemblyInfo.cs
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.csproj.CoreCompileInputs.cache
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\staticwebassets\RegistroVotantes.Api.StaticWebAssets.Manifest.cache
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\staticwebassets\RegistroVotantes.Api.StaticWebAssets.xml
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\scopedcss\bundle\RegistroVotantes.Api.styles.css

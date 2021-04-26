@@ -1,14 +1,11 @@
-
-using RegistroVotantes.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
+using RegistroVotantes.Domain.Entities;
 using System;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Formatting;
-using System.Text;
 
-namespace Api.Test
+namespace RegistroVotantes.Api.Test
 {
     [TestClass]
     public class VotanteControllerTest : IntegrationTestBuilder
@@ -19,12 +16,10 @@ namespace Api.Test
             BootstrapTestingSuite();
         }
 
-     
-
         [TestMethod]
         public void PostPersonSuccess()
         {
-            var votante = new 
+            var votante = new
             {
                 FechaDeNacimiento = DateTime.Now.AddYears(-30),
                 Nacionalidad = "Colombiano"
@@ -38,7 +33,7 @@ namespace Api.Test
         [TestMethod]
         public void PostPersonError()
         {
-            var votante = new 
+            var votante = new
             {
                 Id = "123456",
                 FechaDeNacimiento = DateTime.Now.AddYears(-30),
@@ -46,17 +41,15 @@ namespace Api.Test
             };
 
             var c = this.TestClient.PostAsync("api/votantes", votante, new JsonMediaTypeFormatter()).Result;
-           
+
             Assert.AreEqual(HttpStatusCode.BadRequest, c.StatusCode);
         }
-
-
 
         [TestMethod]
         public void PostPersonErrorFecha()
         {
-            var votante = new
-            {                
+            Votante votante = new Votante()
+            {
                 FechaDeNacimiento = DateTime.Now.AddYears(-10),
                 Nacionalidad = "Colombiano"
             };
@@ -70,7 +63,7 @@ namespace Api.Test
         public void PostPersonErrorNacionalidad()
         {
             var votante = new
-            {               
+            {
                 FechaDeNacimiento = DateTime.Now.AddYears(-30),
                 Nacionalidad = "Puertorricense"
             };
@@ -80,5 +73,4 @@ namespace Api.Test
             Assert.AreEqual(HttpStatusCode.InternalServerError, c.StatusCode);
         }
     }
-
 }

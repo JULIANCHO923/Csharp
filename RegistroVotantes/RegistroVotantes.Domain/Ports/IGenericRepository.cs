@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RegistroVotantes.Domain.Ports
@@ -19,8 +18,11 @@ namespace RegistroVotantes.Domain.Ports
              bool isTracking = false, params Expression<Func<E, object>>[] includeObjectProperties);
 
         Task<E> GetByIdAsync(object id);
+
         Task<E> AddAsync(E entity);
+
         Task UpdateAsync(E entity);
+
         Task DeleteAsync(E entity);
     }
 }

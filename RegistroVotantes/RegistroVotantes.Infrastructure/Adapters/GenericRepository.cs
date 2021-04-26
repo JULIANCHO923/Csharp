@@ -1,5 +1,5 @@
-﻿using RegistroVotantes.Domain.Ports;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using RegistroVotantes.Domain.Ports;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,7 +74,6 @@ namespace RegistroVotantes.Infrastructure.Adapters
                 : await query.ToListAsync().ConfigureAwait(false);
         }
 
-
         public async Task<E> GetByIdAsync(object id)
         {
             return await _Context.Set<E>().FindAsync(id).ConfigureAwait(false);
@@ -116,7 +115,6 @@ namespace RegistroVotantes.Infrastructure.Adapters
             GC.SuppressFinalize(this);
         }
 
-
         protected virtual void Dispose(bool disposing)
         {
             this._Context.Dispose();
@@ -133,14 +131,14 @@ namespace RegistroVotantes.Infrastructure.Adapters
                     case EntityState.Added:
                         entry.Property("CreatedOn").CurrentValue = DateTime.UtcNow;
                         break;
+
                     case EntityState.Modified:
                         entry.Property("UpdatedOn").CurrentValue = DateTime.UtcNow;
-                        break;                   
+                        break;
                 }
             }
 
             await _Context.CommitAsync().ConfigureAwait(false);
         }
-
     }
 }

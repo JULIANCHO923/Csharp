@@ -1,19 +1,14 @@
-using AutoMapper;
-using RegistroVotantes.Api.Extensions;
-using RegistroVotantes.Api.Filters;
-using RegistroVotantes.Domain.Services;
-using RegistroVotantes.Infrastructure.Adapters;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RegistroVotantes.Api.Extensions;
+using RegistroVotantes.Api.Filters;
+using RegistroVotantes.Domain.Services;
 using System;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
 
 namespace RegistroVotantes.Api
 {
@@ -50,8 +45,6 @@ namespace RegistroVotantes.Api
 
             services.AddTransient(typeof(ServicioValidacionVotante));
 
-           
-
             services.AddControllers(mvcOpts =>
             {
                 mvcOpts.Filters.Add(typeof(AppExceptionFilterAttribute));
@@ -63,9 +56,7 @@ namespace RegistroVotantes.Api
 
             services.LoadAppStoreRepositories();
             services.AddSwaggerDocument();
-
         }
-
 
         public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -86,7 +77,6 @@ namespace RegistroVotantes.Api
 
             app.UseOpenApi();
             app.UseSwaggerUi3();
-
         }
     }
 }

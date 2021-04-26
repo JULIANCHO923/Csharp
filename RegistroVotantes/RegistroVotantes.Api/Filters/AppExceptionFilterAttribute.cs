@@ -4,20 +4,17 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Net;
 
-
 namespace RegistroVotantes.Api.Filters
 {
     [AttributeUsage(AttributeTargets.All)]
     public sealed class AppExceptionFilterAttribute : ExceptionFilterAttribute
     {
-
         private readonly ILogger<Exception> _Logger;
 
         public AppExceptionFilterAttribute(ILogger<Exception> logger)
         {
             _Logger = logger;
         }
-
 
         public override void OnException(ExceptionContext context)
         {
@@ -35,7 +32,5 @@ namespace RegistroVotantes.Api.Filters
                 context.Result = new ObjectResult(msg);
             }
         }
-
-
     }
 }

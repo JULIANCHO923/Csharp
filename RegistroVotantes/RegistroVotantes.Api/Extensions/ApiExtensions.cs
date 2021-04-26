@@ -1,7 +1,7 @@
-﻿using RegistroVotantes.Domain.Ports;
+﻿using Microsoft.Extensions.DependencyInjection;
+using RegistroVotantes.Domain.Ports;
 using RegistroVotantes.Domain.Services;
 using RegistroVotantes.Infrastructure.Adapters;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 
@@ -9,16 +9,13 @@ namespace RegistroVotantes.Api.Extensions
 {
     public static class ApiExtensions
     {
-
         public static IServiceCollection LoadAppStoreRepositories(this IServiceCollection services)
         {
-
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             var _services = AppDomain.CurrentDomain.GetAssemblies().Where(assembly => assembly.FullName.Contains("Domain", StringComparison.InvariantCulture))
                 .SelectMany(s => s.GetTypes())
                 .Where(p => p.CustomAttributes.Any(x => x.AttributeType == typeof(DomainServiceAttribute)));
-
 
             foreach (var _service in _services)
             {
@@ -32,7 +29,5 @@ namespace RegistroVotantes.Api.Extensions
 
             return services;
         }
-
-
     }
 }

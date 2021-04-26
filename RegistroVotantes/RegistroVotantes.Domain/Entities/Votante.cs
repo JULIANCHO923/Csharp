@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RegistroVotantes.Domain.Entities
 {
@@ -9,5 +7,15 @@ namespace RegistroVotantes.Domain.Entities
         public string Nacionalidad { get; set; }
 
         public DateTime FechaDeNacimiento { get; set; }
+
+        public Votante()
+        {
+        }
+
+        public Votante(string nacionalidad, DateTime fechaDeNacimiento)
+        {
+            this.Nacionalidad = nacionalidad;
+            this.FechaDeNacimiento = fechaDeNacimiento;
+        }
     }
 }
