@@ -32,13 +32,14 @@ jobs:
   - task: EPM-Evaluacion-Conectividad-SonarQube@0
     displayName: 'EPM - Evaluación de Conectividad SonarQube '
     inputs:
-      SonarQubeInput-ECSQ: 7aea38e8-d354-4fcc-9dd2-2ea89634a384
+      SonarQubeInput-ECSQ: 'SonarEPM'
+
   - task: SonarQubePrepare@4
     displayName: Prepare analysis on SonarQube
     condition: eq(variables['ESTADOSONAR'],1)
     continueOnError: True
     inputs:
-      SonarQube: 7aea38e8-d354-4fcc-9dd2-2ea89634a384
+      SonarQube: 'SonarEPM'
       projectKey: PruebasDevOps.RegistroVotantes-PruebasAutomatizadas
       projectName: PruebasDevOps - RegistroVotantes-PruebasAutomatizadas
       projectVersion: $(Build.BuildNumber)
@@ -93,7 +94,7 @@ jobs:
     condition: eq(variables['ESTADOSONAR'],1)
     continueOnError: True
     inputs:
-      SonarQubeInput: 7aea38e8-d354-4fcc-9dd2-2ea89634a384
+      SonarQubeInput: 'SonarEPM'
   
 
   - task: PublishBuildArtifacts@1
