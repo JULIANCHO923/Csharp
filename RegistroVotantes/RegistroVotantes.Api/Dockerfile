@@ -7,7 +7,6 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["Api/Api.csproj", "Api/"]
 COPY ["Domain/Domain.csproj", "Domain/"]
-COPY ["Application/Application.csproj", "Application/"]
 COPY ["Infrastructure/Infrastructure.csproj", "Infrastructure/"]
 RUN dotnet restore "Api/Api.csproj"
 COPY . .

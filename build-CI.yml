@@ -1,0 +1,142 @@
+name: $(Build.SourceBranchName)_$(date:yyyyMMdd)$(rev:.r)
+
+trigger:
+- desarrollo
+
+variables:
+ - name: BuildPlatform
+ - value: 'Any CPU'
+ - name: BuildConfiguration
+ - value: Release
+
+jobs:
+- job: Phase_1
+  displayName: 'Integración Continua'
+  cancelTimeoutInMinutes: 1
+  pool:
+    vmImage: 'ubuntu-latest'
+
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - task: NuGetToolInstaller@0
+    name: NuGetToolInstaller1
+    displayName: Use NuGet
+
+  - task: NuGetCommand@2
+    name: NuGetCommand2
+    displayName: NuGet restore
+    inputs:
+      solution: '**/RegistroVotantes.sln'
+      
+  - task: EPM-Evaluacion-Conectividad-SonarQube@0
+    displayName: 'EPM - Evaluación de Conectividad SonarQube '
+    inputs:
+      SonarQubeInput-ECSQ: 7aea38e8-d354-4fcc-9dd2-2ea89634a384
+  - task: SonarQubePrepare@4
+    displayName: Prepare analysis on SonarQube
+    condition: eq(variables['ESTADOSONAR'],1)
+    continueOnError: True
+    inputs:
+      SonarQube: 7aea38e8-d354-4fcc-9dd2-2ea89634a384
+      projectKey: PruebasDevOps.RegistroVotantes-PruebasAutomatizadas
+      projectName: PruebasDevOps - RegistroVotantes-PruebasAutomatizadas
+      projectVersion: $(Build.BuildNumber)
+      extraProperties: >-
+        ## https:\\docs.sonarqube.org\latest\analysis\scan\sonarscanner-for-msbuild\
+
+
+        /d:sonar.cs.vscoveragexml.reportsPaths=**\ *.coveragexml
+
+
+        /d:sonar.cs.vstest.reportsPaths=**\*.trx
+
+        sonar.sourceEncoding=UTF-8
+
+        sonar.ws.timeout=600
+
+        sonar.exclusions=""
+
+  - task: VSBuild@1
+    name: VSBuild3
+    displayName: Build solution
+    inputs:
+      solution: $(BuildParameters.solution)
+      msbuildArgs: /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\" /p:autoparameterizationwebconfigconnectionstrings=false /p:TransformConfigFile=true
+      platform: $(BuildPlatform)
+      configuration: $(BuildConfiguration)
+
+  - task: VSTest@2
+    displayName: VsTest - testAssemblies
+    continueOnError: True
+    inputs:
+      testAssemblyVer2: >-
+        **\*Test*.dll       
+
+        !**\*TestAdapter.dll
+
+        !**\obj\**
+      resultsFolder: $(Common.TestResultsDirectory)
+      codeCoverageEnabled: true
+      otherConsoleOptions: /platform:x64
+      platform: $(BuildPlatform)
+      configuration: $(BuildConfiguration)
+      diagnosticsEnabled: true
+
+  - task: SonarQubeAnalyze@4
+    displayName: Run Code Analysis
+    condition: eq(variables['ESTADOSONAR'],1)
+    continueOnError: True
+
+  - task: EPM-Quality-Gate-Sonar@0
+    displayName: EPM - Evaluación del Quality Gate SonarQube
+    condition: eq(variables['ESTADOSONAR'],1)
+    continueOnError: True
+    inputs:
+      SonarQubeInput: 7aea38e8-d354-4fcc-9dd2-2ea89634a384
+      
+  - task: CopyFiles@2
+    displayName: 'Copy Files to: $(carpetaServiciosWindows)'
+    inputs:
+      SourceFolder: $(build.sourcesdirectory)
+      Contents: '**\Epm.Aguas.Hidro.ServicioTareaAutomaticas\bin\$(BuildConfiguration)\**'
+      TargetFolder: $(build.artifactstagingdirectory)\$(carpetaServiciosWindows)\
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: $(carpetaServiciosWindows)'
+    inputs:
+      PathtoPublish: $(build.artifactstagingdirectory)\$(carpetaServiciosWindows)\
+      ArtifactName: $(carpetaServiciosWindows)
+  - task: CopyFiles@2
+    displayName: 'Copy Files to: $(carpetaServiciosIntegracion)'
+    inputs:
+      SourceFolder: $(build.artifactstagingdirectory)\
+      Contents: Epm.Aguas.Hidro.Integracion.zip
+      TargetFolder: $(build.artifactstagingdirectory)\$(carpetaServiciosIntegracion)\
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: $(carpetaServiciosIntegracion)'
+    inputs:
+      PathtoPublish: $(build.artifactstagingdirectory)\$(carpetaServiciosIntegracion)\
+      ArtifactName: $(carpetaServiciosIntegracion)
+  - task: CopyFiles@2
+    displayName: 'Copy Files to: $(carpetaServiciosPresentacion)'
+    inputs:
+      SourceFolder: $(build.artifactstagingdirectory)\
+      Contents: Epm.Aguas.Hidro.Presentacion.zip
+      TargetFolder: $(build.artifactstagingdirectory)\$(carpetaServiciosPresentacion)\
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: $(carpetaServiciosPresentacion)'
+    inputs:
+      PathtoPublish: $(build.artifactstagingdirectory)\$(carpetaServiciosPresentacion)\
+      ArtifactName: $(carpetaServiciosPresentacion)
+  - task: CopyFiles@2
+    displayName: 'Copy Files to: $(carpetaServiciosNegocio)'
+    inputs:
+      SourceFolder: $(build.artifactstagingdirectory)\
+      Contents: Epm.Aguas.Hidro.ServiciosNegocio.zip
+      TargetFolder: $(build.artifactstagingdirectory)\$(carpetaServiciosNegocio)\
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: $(carpetaServiciosNegocio)'
+    inputs:
+      PathtoPublish: $(build.artifactstagingdirectory)\$(carpetaServiciosNegocio)\
+      ArtifactName: $(carpetaServiciosNegocio)
+...

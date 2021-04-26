@@ -11,8 +11,8 @@ namespace RegistroVotantes.Domain.Tests.TestDataBuilder
         public DateTime FechaDeNacimiento;
         public VotanteTestDataBuilder ConValoresDePrueba()
         {
-            Nacionalidad = ""
-
+            Nacionalidad = "";
+            return this;
 
         }
     }
