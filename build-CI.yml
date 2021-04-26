@@ -74,7 +74,7 @@ jobs:
     continueOnError: True
     inputs:
       testAssemblyVer2: >-
-        **\*Test*.dll       
+        **\RegistroVotantes.*Test*.dll       
 
         !**\*TestAdapter.dll
 
