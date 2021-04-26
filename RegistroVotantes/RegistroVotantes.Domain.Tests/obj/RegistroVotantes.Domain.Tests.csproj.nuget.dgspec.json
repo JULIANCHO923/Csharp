@@ -151,6 +151,10 @@
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
               "version": "[3.0.1, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.5.3, )"
             }
           },
           "imports": [

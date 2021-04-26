@@ -1,21 +1,22 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RegistroVotantes.Domain.Entities;
+using RegistroVotantes.Domain.Entities.Excepciones;
 using RegistroVotantes.Domain.Services;
 using System;
 
 namespace RegistroVotantes.Domain.Tests
 {
     [TestClass]
-    public class VotanteServiceTest_1_AAA
+    public class _1_ValidacionVotante_FechaNacimiento_AAA
     {
-        private ServicioValidacionVotante svv;
+        private ServicioValidacionVotante servicioValidacionVotante;
         private Constantes constantes;
 
         [TestInitialize]
         public void Initialize()
         {
             constantes = new Constantes();
-            svv = new ServicioValidacionVotante(constantes);
+            servicioValidacionVotante = new ServicioValidacionVotante(constantes);
         }
 
         [TestMethod]
@@ -29,14 +30,14 @@ namespace RegistroVotantes.Domain.Tests
             };
 
             // Act
-            bool tieneEdadPermitida = svv.TieneEdadMinimaPermitida(votanteConEdadPermitida.FechaDeNacimiento);
+            bool tieneEdadPermitida = servicioValidacionVotante.TieneEdadMinimaPermitida(votanteConEdadPermitida.FechaDeNacimiento);
 
             // Assert
-            Assert.IsTrue(tieneEdadPermitida);
+            Assert.IsTrue(tieneEdadPermitida, "Fecha de Nacimiento No Permitida");
         }
 
         // Assert
-        [TestMethod, ExpectedException(typeof(Exception))]
+        [TestMethod, ExpectedException(typeof(ExcepcionFechaDeNacimiento))]
         public void CuandoVotanteNoTieneEdadPermitidaEntoncesValidacionDeEdadRetornaExcepcion()
         {
             // Arrange
@@ -47,7 +48,7 @@ namespace RegistroVotantes.Domain.Tests
             };
 
             // Act
-            svv.TieneEdadMinimaPermitida(votanteMenorEdadPermitida.FechaDeNacimiento);
+            servicioValidacionVotante.TieneEdadMinimaPermitida(votanteMenorEdadPermitida.FechaDeNacimiento);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace RegistroVotantes.Domain.Tests.TestDataBuilder
 
         public DateTime FechaDeNacimiento;
 
-        public VotanteTestDataBuilder ConValoresDePrueba()
+        public VotanteTestDataBuilder ConValoresPorDefecto()
         {
             Nacionalidad = new Constantes().NACIONALIDAD;
             FechaDeNacimiento = DateTime.Now.AddYears(-18);
@@ -28,7 +28,7 @@ namespace RegistroVotantes.Domain.Tests.TestDataBuilder
             return this;
         }
 
-        public Votante Build()
+        public Votante Construir()
         {
             return new Votante(this.Nacionalidad, this.FechaDeNacimiento);
         }

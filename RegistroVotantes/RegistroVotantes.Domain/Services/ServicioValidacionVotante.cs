@@ -1,4 +1,5 @@
 ﻿using RegistroVotantes.Domain.Entities;
+using RegistroVotantes.Domain.Entities.Excepciones;
 using RegistroVotantes.Domain.Ports;
 using System;
 using System.Threading.Tasks;
@@ -42,7 +43,7 @@ namespace RegistroVotantes.Domain.Services
             var edadEnAnos = (int)(DateTime.Now.Subtract(fechaDeNacimiento).TotalDays / 365);
             if (edadEnAnos < 18)
             {
-                throw new Exception("No puede votar por ser menor de 18 años");
+                throw new ExcepcionFechaDeNacimiento(fechaDeNacimiento);
             }
             return true;
         }
@@ -51,7 +52,7 @@ namespace RegistroVotantes.Domain.Services
         {
             if (!nacionalidad.Equals(this.constantes.NACIONALIDAD))
             {
-                throw new Exception("No puede votar por no ser colombiano");
+                throw new ExcepcionNacionalidad(nacionalidad);
             }
 
             return true;

@@ -26,15 +26,7 @@ namespace RegistroVotantes.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            /*
-            services.AddMediatR(Assembly.Load("RegistroVotantes.Application"), typeof(Startup).Assembly);
 
-            var applicationAssemblyName = typeof(Startup).Assembly.GetReferencedAssemblies()
-                .FirstOrDefault(x => x.Name.Equals("RegistroVotantes.Application", StringComparison.InvariantCulture));
-
-            services.AddAutoMapper(Assembly.Load(applicationAssemblyName.FullName));
-
-            */
             services.AddDbContext<Infrastructure.PersistenceContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("database"), sqlopts =>

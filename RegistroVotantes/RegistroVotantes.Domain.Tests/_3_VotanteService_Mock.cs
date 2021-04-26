@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace RegistroVotantes.Domain.Tests
 {
     [TestClass]
-    public class VotanteServiceTest_3_Mock
+    public class _3_VotanteService_Mock
     {
-        private ServicioValidacionVotante svv;
+        private ServicioValidacionVotante servicioValidacionVotante;
         private IGenericRepository<Votante> _mockRepo;
         private Constantes constantes;
 
@@ -22,22 +22,22 @@ namespace RegistroVotantes.Domain.Tests
 
             _mockRepo = Substitute.For<IGenericRepository<Votante>>();
 
-            svv = new ServicioValidacionVotante(_mockRepo, constantes);
+            servicioValidacionVotante = new ServicioValidacionVotante(_mockRepo, constantes);
         }
 
         [TestMethod]
-        public void VotanteExitoso()
+        public void CuandoIngresoVotanteValidoEntoncesRegistrarVotanteRetornaEntidadVotante()
         {
             // Arrange
-            Votante votanteValido = new VotanteTestDataBuilder().ConValoresDePrueba().Build();
+            Votante votanteValido = new VotanteTestDataBuilder().ConValoresPorDefecto().Construir();
 
             _mockRepo.AddAsync(Arg.Any<Votante>()).Returns(Task.FromResult(new Votante()));
 
             // Act
-            var votanteRegistrado = svv.RegistrarVotante(votanteValido).Result;
+            var votanteRegistrado = servicioValidacionVotante.RegistrarVotante(votanteValido).Result;
 
             // Assert
-            Assert.IsTrue(votanteRegistrado is DomainEntity);
+            Assert.IsTrue(votanteRegistrado is DomainEntity, "El Votante registrado no es un entidad del dominio");
         }
     }
 }
