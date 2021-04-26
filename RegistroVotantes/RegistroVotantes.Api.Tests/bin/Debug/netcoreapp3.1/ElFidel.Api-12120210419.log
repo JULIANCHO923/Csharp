@@ -1,0 +1,13 @@
+2021-04-19 15:50:06.307 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-19 15:50:06.378 -05:00 [INF] Hosting environment: Development
+2021-04-19 15:50:06.380 -05:00 [INF] Content root path: C:\Users\jose.fernandez\source\repos\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api
+2021-04-19 15:50:14.160 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/votantes application/json; charset=utf-8 
+2021-04-19 15:50:14.167 -05:00 [WRN] Failed to determine the https port for redirect.
+2021-04-19 15:50:14.192 -05:00 [INF] Executing endpoint 'RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api)'
+2021-04-19 15:50:14.224 -05:00 [INF] Route matched with {action = "RegistroVotante", controller = "Votantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] RegistroVotante(RegistroVotantes.Domain.Entities.Votante) on controller RegistroVotantes.Api.Controllers.VotantesController (RegistroVotantes.Api).
+2021-04-19 15:50:14.742 -05:00 [INF] Entity Framework Core 3.1.1 initialized 'PersistenceContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=TestDb 
+2021-04-19 15:50:14.846 -05:00 [INF] Saved 1 entities to in-memory store.
+2021-04-19 15:50:14.855 -05:00 [INF] Executing ObjectResult, writing value of type 'RegistroVotantes.Domain.Entities.Votante'.
+2021-04-19 15:50:14.869 -05:00 [INF] Executed action RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api) in 641.0234ms
+2021-04-19 15:50:14.870 -05:00 [INF] Executed endpoint 'RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api)'
+2021-04-19 15:50:14.875 -05:00 [INF] Request finished in 717.7703ms 200 application/json; charset=utf-8

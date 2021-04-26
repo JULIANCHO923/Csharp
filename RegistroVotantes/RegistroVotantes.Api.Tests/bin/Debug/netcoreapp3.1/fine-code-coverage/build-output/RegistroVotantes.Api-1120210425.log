@@ -1,0 +1,26 @@
+2021-04-25 09:09:11.101 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-25 09:09:11.138 -05:00 [INF] Hosting environment: Development
+2021-04-25 09:09:11.138 -05:00 [INF] Content root path: C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api
+2021-04-25 09:09:11.156 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/votantes application/json; charset=utf-8 
+2021-04-25 09:09:11.157 -05:00 [WRN] Failed to determine the https port for redirect.
+2021-04-25 09:09:11.162 -05:00 [INF] Executing endpoint 'RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api)'
+2021-04-25 09:09:11.183 -05:00 [INF] Route matched with {action = "RegistroVotante", controller = "Votantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] RegistroVotante(RegistroVotantes.Domain.Entities.Votante) on controller RegistroVotantes.Api.Controllers.VotantesController (RegistroVotantes.Api).
+2021-04-25 09:09:11.299 -05:00 [ERR] No puede votar por ser menor de 18 años
+System.Exception: No puede votar por ser menor de 18 años
+   at RegistroVotantes.Domain.Services.ServicioValidacionVotante.EdadMinima(DateTime entonces) in C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\Services\ServicioValidacionVotante.cs:line 32
+   at RegistroVotantes.Domain.Services.ServicioValidacionVotante.RegistrarVotante(Votante v) in C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Domain\Services\ServicioValidacionVotante.cs:line 20
+   at RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante(Votante v) in C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\Controllers\VotantesController.cs:line 30
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2021-04-25 09:09:11.307 -05:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-04-25 09:09:11.314 -05:00 [INF] Executed action RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api) in 130.6489ms
+2021-04-25 09:09:11.315 -05:00 [INF] Executed endpoint 'RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api)'
+2021-04-25 09:09:11.316 -05:00 [INF] Request finished in 159.3818ms 500 application/json; charset=utf-8

@@ -1,0 +1,12 @@
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\obj\Debug\netstandard2.1\RegistroVotantes.Infrastructure.csprojAssemblyReference.cache
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\obj\Debug\netstandard2.1\RegistroVotantes.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\obj\Debug\netstandard2.1\RegistroVotantes.Infrastructure.AssemblyInfo.cs
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\obj\Debug\netstandard2.1\RegistroVotantes.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\bin\Debug\netstandard2.1\RegistroVotantes.Infrastructure.deps.json
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\bin\Debug\netstandard2.1\RegistroVotantes.Infrastructure.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\bin\Debug\netstandard2.1\RegistroVotantes.Infrastructure.pdb
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\bin\Debug\netstandard2.1\RegistroVotantes.Domain.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\bin\Debug\netstandard2.1\RegistroVotantes.Domain.pdb
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\obj\Debug\netstandard2.1\RegistroVotantes.Infrastructure.csproj.CopyComplete
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\obj\Debug\netstandard2.1\RegistroVotantes.Infrastructure.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Infrastructure\obj\Debug\netstandard2.1\RegistroVotantes.Infrastructure.pdb

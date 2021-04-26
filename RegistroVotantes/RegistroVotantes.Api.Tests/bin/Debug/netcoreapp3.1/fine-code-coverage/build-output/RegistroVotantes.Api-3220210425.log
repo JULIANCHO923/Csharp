@@ -1,0 +1,12 @@
+2021-04-25 09:09:05.941 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-25 09:09:06.052 -05:00 [INF] Hosting environment: Development
+2021-04-25 09:09:06.056 -05:00 [INF] Content root path: C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api
+2021-04-25 09:09:06.196 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/votantes application/json; charset=utf-8 
+2021-04-25 09:09:06.206 -05:00 [WRN] Failed to determine the https port for redirect.
+2021-04-25 09:09:06.244 -05:00 [INF] Executing endpoint 'RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api)'
+2021-04-25 09:09:06.305 -05:00 [INF] Route matched with {action = "RegistroVotante", controller = "Votantes"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] RegistroVotante(RegistroVotantes.Domain.Entities.Votante) on controller RegistroVotantes.Api.Controllers.VotantesController (RegistroVotantes.Api).
+2021-04-25 09:09:06.746 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-04-25 09:09:06.819 -05:00 [INF] Executed action RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api) in 489.4442ms
+2021-04-25 09:09:06.833 -05:00 [INF] Executed endpoint 'RegistroVotantes.Api.Controllers.VotantesController.RegistroVotante (RegistroVotantes.Api)'
+2021-04-25 09:09:06.848 -05:00 [INF] Request finished in 654.5854ms 400 application/problem+json; charset=utf-8
+2021-04-25 09:09:20.696 -05:00 [INF] Application is shutting down...
