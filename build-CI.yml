@@ -94,49 +94,11 @@ jobs:
     continueOnError: True
     inputs:
       SonarQubeInput: 7aea38e8-d354-4fcc-9dd2-2ea89634a384
-      
-  - task: CopyFiles@2
-    displayName: 'Copy Files to: $(carpetaServiciosWindows)'
-    inputs:
-      SourceFolder: $(build.sourcesdirectory)
-      Contents: '**\Epm.Aguas.Hidro.ServicioTareaAutomaticas\bin\$(BuildConfiguration)\**'
-      TargetFolder: $(build.artifactstagingdirectory)\$(carpetaServiciosWindows)\
+  
+
   - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: $(carpetaServiciosWindows)'
+    displayName: 'Publish Artifact:'
     inputs:
-      PathtoPublish: $(build.artifactstagingdirectory)\$(carpetaServiciosWindows)\
-      ArtifactName: $(carpetaServiciosWindows)
-  - task: CopyFiles@2
-    displayName: 'Copy Files to: $(carpetaServiciosIntegracion)'
-    inputs:
-      SourceFolder: $(build.artifactstagingdirectory)\
-      Contents: Epm.Aguas.Hidro.Integracion.zip
-      TargetFolder: $(build.artifactstagingdirectory)\$(carpetaServiciosIntegracion)\
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: $(carpetaServiciosIntegracion)'
-    inputs:
-      PathtoPublish: $(build.artifactstagingdirectory)\$(carpetaServiciosIntegracion)\
-      ArtifactName: $(carpetaServiciosIntegracion)
-  - task: CopyFiles@2
-    displayName: 'Copy Files to: $(carpetaServiciosPresentacion)'
-    inputs:
-      SourceFolder: $(build.artifactstagingdirectory)\
-      Contents: Epm.Aguas.Hidro.Presentacion.zip
-      TargetFolder: $(build.artifactstagingdirectory)\$(carpetaServiciosPresentacion)\
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: $(carpetaServiciosPresentacion)'
-    inputs:
-      PathtoPublish: $(build.artifactstagingdirectory)\$(carpetaServiciosPresentacion)\
-      ArtifactName: $(carpetaServiciosPresentacion)
-  - task: CopyFiles@2
-    displayName: 'Copy Files to: $(carpetaServiciosNegocio)'
-    inputs:
-      SourceFolder: $(build.artifactstagingdirectory)\
-      Contents: Epm.Aguas.Hidro.ServiciosNegocio.zip
-      TargetFolder: $(build.artifactstagingdirectory)\$(carpetaServiciosNegocio)\
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: $(carpetaServiciosNegocio)'
-    inputs:
-      PathtoPublish: $(build.artifactstagingdirectory)\$(carpetaServiciosNegocio)\
-      ArtifactName: $(carpetaServiciosNegocio)
+      PathtoPublish: $(build.artifactstagingdirectory)
+      ArtifactName: 'RegistroVotantes_Artifact'
 ...
