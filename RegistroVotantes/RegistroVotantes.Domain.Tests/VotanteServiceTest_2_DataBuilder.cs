@@ -1,14 +1,8 @@
 using RegistroVotantes.Domain.Entities;
-using RegistroVotantes.Domain.Ports;
 using RegistroVotantes.Domain.Services;
-using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NSubstitute;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
+
 
 namespace RegistroVotantes.Domain.Tests
 {
