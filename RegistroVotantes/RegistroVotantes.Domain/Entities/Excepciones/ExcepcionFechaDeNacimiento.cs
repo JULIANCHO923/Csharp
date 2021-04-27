@@ -1,5 +1,4 @@
-﻿using NPOI.Util;
-using System;
+﻿using System;
 
 namespace RegistroVotantes.Domain.Entities.Excepciones
 {

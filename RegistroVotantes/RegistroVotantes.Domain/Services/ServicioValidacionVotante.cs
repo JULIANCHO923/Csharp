@@ -9,13 +9,13 @@ namespace RegistroVotantes.Domain.Services
     public class ServicioValidacionVotante
     {
         private readonly IGenericRepository<Votante> Repo;
-        private readonly Constantes constantes = new Constantes();
+        private readonly ConstantesVotante constantes = new ConstantesVotante();
 
         public ServicioValidacionVotante()
         {
         }
 
-        public ServicioValidacionVotante(Constantes constantes)
+        public ServicioValidacionVotante(ConstantesVotante constantes)
         {
             this.constantes = constantes;
         }
@@ -25,7 +25,7 @@ namespace RegistroVotantes.Domain.Services
             Repo = repo;
         }
 
-        public ServicioValidacionVotante(IGenericRepository<Votante> repo, Constantes constantes)
+        public ServicioValidacionVotante(IGenericRepository<Votante> repo, ConstantesVotante constantes)
         {
             Repo = repo;
             this.constantes = constantes;

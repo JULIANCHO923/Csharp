@@ -9,20 +9,23 @@ using System.Threading.Tasks;
 namespace RegistroVotantes.Domain.Tests
 {
     [TestClass]
-    public class _3_VotanteService_Mock
+    public class _3_ServicioValidacionVotante_Mock
     {
         private ServicioValidacionVotante servicioValidacionVotante;
         private IGenericRepository<Votante> _mockRepo;
-        private Constantes constantes;
+        private ConstantesVotante constantesVotante;
 
         [TestInitialize]
         public void Initialize()
         {
-            constantes = new Constantes();
+            constantesVotante = new ConstantesVotante();
 
             _mockRepo = Substitute.For<IGenericRepository<Votante>>();
 
-            servicioValidacionVotante = new ServicioValidacionVotante(_mockRepo, constantes);
+            servicioValidacionVotante = new ServicioValidacionVotante(_mockRepo, constantesVotante);
+          /*  Verificar Valor no nulo en el ID
+                Validar que el mock se haya llamado una vez
+          */
         }
 
         [TestMethod]

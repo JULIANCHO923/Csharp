@@ -8,16 +8,16 @@ using System;
 namespace RegistroVotantes.Domain.Tests
 {
     [TestClass]
-    public class _2_ValidacionVotante_Nacionalidad_DataBuilder
+    public class _2_ServicioValidacionVotanteTest_TestDataBuilder
     {
         private ServicioValidacionVotante servicioValidacionVotante;
-        private Constantes constantes;
+        private ConstantesVotante constantesVotante;
 
         [TestInitialize]
         public void Initialize()
         {
-            constantes = new Constantes();
-            servicioValidacionVotante = new ServicioValidacionVotante(constantes);
+            constantesVotante = new ConstantesVotante();
+            servicioValidacionVotante = new ServicioValidacionVotante(constantesVotante);
         }
 
         [TestMethod]
