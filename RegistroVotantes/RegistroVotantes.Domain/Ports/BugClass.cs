@@ -8,5 +8,19 @@ namespace RegistroVotantes.Domain.Ports
     {
 
         private BugClass() { }
+
+        public void suma(int a, int b)
+        {
+            try
+            {
+
+                int c = a / b;
+            }
+            catch
+            {
+            }
+
+        }
+
     }
 }
