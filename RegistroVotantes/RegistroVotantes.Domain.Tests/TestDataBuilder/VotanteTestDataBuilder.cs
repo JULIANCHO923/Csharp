@@ -11,8 +11,8 @@ namespace RegistroVotantes.Domain.Tests.TestDataBuilder
 
         public VotanteTestDataBuilder ConValoresPorDefecto()
         {
-            Nacionalidad = new ConstantesVotante().NACIONALIDAD;
-            FechaDeNacimiento = DateTime.Now.AddYears(-18);
+            Nacionalidad = new ConstantesVotante().NACIONALIDADPERMITIDA;
+            FechaDeNacimiento = DateTime.Now.AddYears(-(new ConstantesVotante().EDADPERMITIDA));
             return this;
         }
 

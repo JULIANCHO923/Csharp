@@ -26,7 +26,6 @@ namespace RegistroVotantes.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddDbContext<Infrastructure.PersistenceContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("database"), sqlopts =>

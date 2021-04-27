@@ -3,7 +3,6 @@ using RegistroVotantes.Domain.Entities;
 using RegistroVotantes.Domain.Entities.Excepciones;
 using RegistroVotantes.Domain.Services;
 using RegistroVotantes.Domain.Tests.TestDataBuilder;
-using System;
 
 namespace RegistroVotantes.Domain.Tests
 {
@@ -34,14 +33,14 @@ namespace RegistroVotantes.Domain.Tests
         }
 
         // Assert
-        [TestMethod, ExpectedException(typeof(ExcepcionNacionalidad))]
+        [TestMethod, ExpectedException(typeof(NacionalidadException))]
         public void CuandoVotanteNoTieneNacionalidadPermitidaEntoncesValidacionDeNacionalidadRetornaExcepcion()
         {
             // Arrange
             Votante votanteNoValido = new VotanteTestDataBuilder().ConValoresPorDefecto().ConNacionalidad("Español").Construir();
 
             // Act
-     servicioValidacionVotante.TieneNacionalidadPermitida(votanteNoValido.Nacionalidad);
+            servicioValidacionVotante.TieneNacionalidadPermitida(votanteNoValido.Nacionalidad);
         }
     }
 }
