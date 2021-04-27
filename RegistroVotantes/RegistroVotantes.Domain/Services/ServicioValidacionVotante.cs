@@ -41,7 +41,7 @@ namespace RegistroVotantes.Domain.Services
         public bool TieneEdadMinimaPermitida(DateTime fechaDeNacimiento)
         {
             var edadEnAnos = (int)(DateTime.Now.Subtract(fechaDeNacimiento).TotalDays / 365);
-            if (edadEnAnos < 18)
+            if (edadEnAnos < constantes.EDADPERMITIDA)
             {
                 throw new FechaDeNacimientoException(fechaDeNacimiento);
             }
@@ -50,7 +50,7 @@ namespace RegistroVotantes.Domain.Services
 
         public bool TieneNacionalidadPermitida(string nacionalidad)
         {
-            if (!nacionalidad.Equals(this.constantes.NACIONALIDAD))
+            if (!nacionalidad.Equals(this.constantes.NACIONALIDADPERMITIDA))
             {
                 throw new NacionalidadException(nacionalidad);
             }
