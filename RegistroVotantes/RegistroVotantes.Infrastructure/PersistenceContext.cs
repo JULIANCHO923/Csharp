@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using RegistroVotantes.Domain.Entities;
 using System;
 using System.Threading.Tasks;
@@ -8,11 +7,8 @@ namespace RegistroVotantes.Infrastructure
 {
     public class PersistenceContext : DbContext
     {
-        private readonly IConfiguration Config;
-
-        public PersistenceContext(DbContextOptions<PersistenceContext> options, IConfiguration config) : base(options)
+        public PersistenceContext(DbContextOptions<PersistenceContext> options) : base(options)
         {
-            Config = config;
         }
 
         public async Task CommitAsync()

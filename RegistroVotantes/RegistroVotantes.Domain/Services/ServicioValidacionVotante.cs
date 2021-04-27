@@ -43,7 +43,7 @@ namespace RegistroVotantes.Domain.Services
             var edadEnAnos = (int)(DateTime.Now.Subtract(fechaDeNacimiento).TotalDays / 365);
             if (edadEnAnos < 18)
             {
-                throw new ExcepcionFechaDeNacimiento(fechaDeNacimiento);
+                throw new FechaDeNacimientoException(fechaDeNacimiento);
             }
             return true;
         }
@@ -52,7 +52,7 @@ namespace RegistroVotantes.Domain.Services
         {
             if (!nacionalidad.Equals(this.constantes.NACIONALIDAD))
             {
-                throw new ExcepcionNacionalidad(nacionalidad);
+                throw new NacionalidadException(nacionalidad);
             }
 
             return true;

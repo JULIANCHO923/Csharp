@@ -21,8 +21,8 @@ namespace RegistroVotantes.Domain.Tests
 
         [TestMethod]
         public void EdadValida()
-        {            
-            DateTime FechaDeNacimiento = DateTime.Now.AddYears(-20);           servicioValidacionVotante.TieneEdadMinimaPermitida(FechaDeNacimiento);      
+        {
+            DateTime FechaDeNacimiento = DateTime.Now.AddYears(-20); servicioValidacionVotante.TieneEdadMinimaPermitida(FechaDeNacimiento);
             Assert.IsTrue(true);
         }
 
@@ -44,7 +44,7 @@ namespace RegistroVotantes.Domain.Tests
         }
 
         // Assert
-        [TestMethod, ExpectedException(typeof(ExcepcionFechaDeNacimiento))]
+        [TestMethod, ExpectedException(typeof(FechaDeNacimientoException))]
         public void CuandoVotanteNoTieneEdadPermitidaEntoncesValidacionDeEdadRetornaExcepcion()
         {
             // Arrange

@@ -23,9 +23,9 @@ namespace RegistroVotantes.Domain.Tests
             _mockRepo = Substitute.For<IGenericRepository<Votante>>();
 
             servicioValidacionVotante = new ServicioValidacionVotante(_mockRepo, constantesVotante);
-          /*  Verificar Valor no nulo en el ID
-                Validar que el mock se haya llamado una vez
-          */
+            /*  Verificar Valor no nulo en el ID
+                  Validar que el mock se haya llamado una vez
+            */
         }
 
         [TestMethod]

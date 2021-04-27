@@ -59,12 +59,17 @@ C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\Namotion.Reflection.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NJsonSchema.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NPOI.OOXML.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NPOI.OpenXml4Net.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NPOI.OpenXmlFormats.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NPOI.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NSwag.Annotations.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NSwag.AspNetCore.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NSwag.Core.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NSwag.Generation.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NSwag.Generation.AspNetCore.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\Serilog.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
@@ -79,6 +84,7 @@ C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.PeriodicBatching.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
@@ -166,9 +172,3 @@ C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.dll
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.pdb
 C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\obj\Debug\netcoreapp3.1\RegistroVotantes.Api.genruntimeconfig.cache
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NPOI.OOXML.dll
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NPOI.OpenXml4Net.dll
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NPOI.OpenXmlFormats.dll
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\NPOI.dll
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
-C:\Users\julian.henao\Desktop\RegistroVotantes\RegistroVotantes\RegistroVotantes.Api\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
