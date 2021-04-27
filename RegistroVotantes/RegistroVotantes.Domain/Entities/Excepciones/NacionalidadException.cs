@@ -10,7 +10,7 @@ namespace RegistroVotantes.Domain.Entities.Excepciones
         {
         }
 
-        private NacionalidadException(SerializationInfo info, StreamingContext context)
+        protected NacionalidadException(SerializationInfo info, StreamingContext context)
         : base(info, context)
         {
         }
