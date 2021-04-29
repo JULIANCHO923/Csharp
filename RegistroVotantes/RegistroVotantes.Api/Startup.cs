@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RegistroVotantes.Api.Extensions;
-using RegistroVotantes.Api.Filters;
-using RegistroVotantes.Domain.Services;
+using RegistroVotantes.Api.Extensiones;
+using RegistroVotantes.Api.Filtros;
+using RegistroVotantes.Dominio.Servicios;
 using System;
 using System.Diagnostics;
 
@@ -26,7 +26,7 @@ namespace RegistroVotantes.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Infrastructure.PersistenceContext>(opt =>
+            services.AddDbContext<Infraestructura.PersistenceContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("database"), sqlopts =>
                 {
@@ -43,7 +43,7 @@ namespace RegistroVotantes.Api
 
             services.AddSingleton(cfg => Configuration);
             services.AddHealthChecks()
-                .AddDbContextCheck<Infrastructure.PersistenceContext>();
+                .AddDbContextCheck<Infraestructura.PersistenceContext>();
 
             services.LoadAppStoreRepositories();
             services.AddSwaggerDocument();
