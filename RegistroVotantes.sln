@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Api", "RegistroVotantes\RegistroVotantes.Api\RegistroVotantes.Api.csproj", "{514B854E-48F0-4E56-92FA-0E0AEB08860F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Api.Tests", "RegistroVotantes\RegistroVotantes.Api.Tests\RegistroVotantes.Api.Tests.csproj", "{FB918B6D-426F-4BA7-8A93-A9267B5DB37E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Api.ApiTests", "RegistroVotantes\RegistroVotantes.Api.ApiTests\RegistroVotantes.Api.ApiTests.csproj", "{FB918B6D-426F-4BA7-8A93-A9267B5DB37E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Domain", "RegistroVotantes\RegistroVotantes.Domain\RegistroVotantes.Domain.csproj", "{8E0EC94A-844E-416A-A65B-6D86CCE82E2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Dominio.PruebasUnitarias", "RegistroVotantes\RegistroVotantes.Dominio.PruebasUnitarias\RegistroVotantes.Dominio.PruebasUnitarias.csproj", "{5F765B80-12E2-44F7-8959-85E8ADFA51E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Domain.Tests", "RegistroVotantes\RegistroVotantes.Domain.Tests\RegistroVotantes.Domain.Tests.csproj", "{5F765B80-12E2-44F7-8959-85E8ADFA51E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Dominio", "RegistroVotantes\RegistroVotantes.Dominio\RegistroVotantes.Dominio.csproj", "{F5FA679D-166E-4003-A628-9C3B60580DEC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Infrastructure", "RegistroVotantes\RegistroVotantes.Infrastructure\RegistroVotantes.Infrastructure.csproj", "{D44697BB-F60E-45EB-B7DF-1F73F356AC93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Infraestructura", "RegistroVotantes\RegistroVotantes.Infraestructura\RegistroVotantes.Infraestructura.csproj", "{6A2DF913-8163-42D3-BDCD-4CF34BE0B036}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroVotantes.Dominio.PruebasMutantes", "RegistroVotantes\RegistroVotantes.Dominio.PruebasMutantes\RegistroVotantes.Dominio.PruebasMutantes.csproj", "{ED195F40-08BE-4E6A-B29D-AD8F95F8CF08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,18 +29,22 @@ Global
 		{FB918B6D-426F-4BA7-8A93-A9267B5DB37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB918B6D-426F-4BA7-8A93-A9267B5DB37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB918B6D-426F-4BA7-8A93-A9267B5DB37E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E0EC94A-844E-416A-A65B-6D86CCE82E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E0EC94A-844E-416A-A65B-6D86CCE82E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E0EC94A-844E-416A-A65B-6D86CCE82E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E0EC94A-844E-416A-A65B-6D86CCE82E2C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F765B80-12E2-44F7-8959-85E8ADFA51E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F765B80-12E2-44F7-8959-85E8ADFA51E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F765B80-12E2-44F7-8959-85E8ADFA51E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F765B80-12E2-44F7-8959-85E8ADFA51E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D44697BB-F60E-45EB-B7DF-1F73F356AC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D44697BB-F60E-45EB-B7DF-1F73F356AC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D44697BB-F60E-45EB-B7DF-1F73F356AC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D44697BB-F60E-45EB-B7DF-1F73F356AC93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FA679D-166E-4003-A628-9C3B60580DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FA679D-166E-4003-A628-9C3B60580DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FA679D-166E-4003-A628-9C3B60580DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FA679D-166E-4003-A628-9C3B60580DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A2DF913-8163-42D3-BDCD-4CF34BE0B036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2DF913-8163-42D3-BDCD-4CF34BE0B036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2DF913-8163-42D3-BDCD-4CF34BE0B036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2DF913-8163-42D3-BDCD-4CF34BE0B036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED195F40-08BE-4E6A-B29D-AD8F95F8CF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED195F40-08BE-4E6A-B29D-AD8F95F8CF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED195F40-08BE-4E6A-B29D-AD8F95F8CF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED195F40-08BE-4E6A-B29D-AD8F95F8CF08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
