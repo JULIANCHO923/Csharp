@@ -4,7 +4,7 @@ using RegistroVotantes.Dominio.Entidades.Excepciones;
 using RegistroVotantes.Dominio.Servicios;
 using System;
 
-namespace RegistroVotantes.Domain.Tests
+namespace RegistroVotantes.Dominio.PruebasUnitarias
 {
     [TestClass]
     public class _1_ServicioValidacionVotanteTest_AAA

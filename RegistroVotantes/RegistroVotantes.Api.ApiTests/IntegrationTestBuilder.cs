@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using System.Net.Http;
 
-namespace RegistroVotantes.Api.Test
+namespace RegistroVotantes.Api.ApiTest
 {
     public class IntegrationTestBuilder : IDisposable
     {

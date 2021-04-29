@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Formatting;
 
-namespace RegistroVotantes.Api.Test
+namespace RegistroVotantes.Api.ApiTest
 {
     [TestClass]
     public class VotanteControllerTest : IntegrationTestBuilder

@@ -6,7 +6,7 @@ using RegistroVotantes.Dominio.Puertos;
 using RegistroVotantes.Dominio.Servicios;
 using System.Threading.Tasks;
 
-namespace RegistroVotantes.Domain.Tests
+namespace RegistroVotantes.Dominio.PruebasUnitarias
 {
     [TestClass]
     public class _3_ServicioValidacionVotante_Mock
@@ -23,9 +23,6 @@ namespace RegistroVotantes.Domain.Tests
             _mockRepo = Substitute.For<IGenericRepository<Votante>>();
 
             servicioValidacionVotante = new ServicioValidacionVotante(_mockRepo, constantesVotante);
-            /*  Verificar Valor no nulo en el ID
-                  Validar que el mock se haya llamado una vez
-            */
         }
 
         [TestMethod]
@@ -40,7 +37,12 @@ namespace RegistroVotantes.Domain.Tests
             var votanteRegistrado = servicioValidacionVotante.RegistrarVotante(votanteValido).Result;
 
             // Assert
+            
             Assert.IsTrue(votanteRegistrado is DomainEntity, "El Votante registrado no es un entidad del dominio");
+
+            Assert.IsNotNull(votanteRegistrado.Id, "El GUID devuelto del votante es nulo");
+            
+            Assert.IsTrue(_mockRepo.Received(1).AddAsync(Arg.Any<Votante>()).IsCompletedSuccessfully, "El mock de la adición del Votante no se completó satisfactoriamente");
         }
     }
 }

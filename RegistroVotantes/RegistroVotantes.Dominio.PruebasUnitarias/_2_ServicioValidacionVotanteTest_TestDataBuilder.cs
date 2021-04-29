@@ -4,7 +4,7 @@ using RegistroVotantes.Dominio.Entidades.Excepciones;
 using RegistroVotantes.Dominio.PruebasUnitarias;
 using RegistroVotantes.Dominio.Servicios;
 
-namespace RegistroVotantes.Domain.Tests
+namespace RegistroVotantes.Dominio.PruebasUnitarias
 {
     [TestClass]
     public class _2_ServicioValidacionVotanteTest_TestDataBuilder
