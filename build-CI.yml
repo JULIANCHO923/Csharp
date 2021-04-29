@@ -16,6 +16,7 @@ jobs:
   displayName: 'Integración Continua'
   cancelTimeoutInMinutes: 1
   pool:
+    name: 'Azure Pipelines'
     vmImage: 'windows-latest'
 
   steps:
@@ -74,7 +75,8 @@ jobs:
     continueOnError: True
     inputs:
       testAssemblyVer2: >-
-        **\RegistroVotantes.*Test*.dll       
+        **\RegistroVotantes.*Test*.dll
+        **\RegistroVotantes.*PruebasUnitarias*.dll       
 
         !**\*TestAdapter.dll
 
