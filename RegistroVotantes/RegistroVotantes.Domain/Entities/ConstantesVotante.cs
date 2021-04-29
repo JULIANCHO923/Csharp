@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace RegistroVotantes.Domain.Entities
+﻿namespace RegistroVotantes.Domain.Entities
 {
     public class ConstantesVotante
     {
