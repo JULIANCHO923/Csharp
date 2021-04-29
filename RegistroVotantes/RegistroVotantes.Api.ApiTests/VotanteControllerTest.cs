@@ -23,55 +23,60 @@ namespace RegistroVotantes.Api.ApiTest
 
 
         [TestMethod]
-        public void CuandoSolicitudPostVotanteValidoEntoncesVotanteRegistradoSatisfactoriamente()
+        public void CuandoSeRealizaSolicitudPostConUnVotanteValidoEntoncesVotanteRegistradoSatisfactoriamenteRetornaOkEnHttpStatusCode()
         {
+            // Arrange
             Votante votanteValido = new VotanteTestDataBuilder().ConValoresPorDefecto().Construir();
 
+            // Act
             var c = this.TestClient.PostAsync(postVotantes, votanteValido, new JsonMediaTypeFormatter()).Result;
+
+            // Assert
             c.EnsureSuccessStatusCode();
             Assert.AreEqual(HttpStatusCode.OK, c.StatusCode);
         }
 
         [TestMethod]
-        public void PostPersonError()
+        public void CuandoVotanteConGUINoPermitidaSeIntentaRegistrarAccedientoAlMetodoPostVotanteEntoncesRetornaraBadRequestEnHttpStatusCode()
         {
-            var votante = new
+            // Arrange
+            var votanteConJsonMalFormado = new
             {
                 Id = "123456",
                 FechaDeNacimiento = DateTime.Now.AddYears(-30),
                 Nacionalidad = "Colombiano"
             };
 
-            var c = this.TestClient.PostAsync(postVotantes, votante, new JsonMediaTypeFormatter()).Result;
+            // Act
+            var c = this.TestClient.PostAsync(postVotantes, votanteConJsonMalFormado, new JsonMediaTypeFormatter()).Result;
 
+            // Assert
             Assert.AreEqual(HttpStatusCode.BadRequest, c.StatusCode);
         }
 
         [TestMethod]
-        public void PostPersonErrorFecha()
+        public void CuandoVotanteConFechaDeNacimientoNoPermitidaSeIntentaRegistrarAccedientoAlMetodoPostVotanteEntoncesRetornaraInternalServerErrorEnHttpStatusCode()
         {
-            Votante votante = new Votante()
-            {
-                FechaDeNacimiento = DateTime.Now.AddYears(-10),
-                Nacionalidad = "Colombiano"
-            };
+            // Arrange
+            Votante votanteNoPermitido = new VotanteTestDataBuilder().ConValoresPorDefecto().ConFechaDeNacimiento(DateTime.Now.AddYears(-10)).Construir();     
 
-            var c = this.TestClient.PostAsync(postVotantes, votante, new JsonMediaTypeFormatter()).Result;
+            // Act
+            var c = this.TestClient.PostAsync(postVotantes, votanteNoPermitido, new JsonMediaTypeFormatter()).Result;
 
+            // Assert
             Assert.AreEqual(HttpStatusCode.InternalServerError, c.StatusCode);
         }
        
         [TestMethod]
-        public void PostPersonErrorNacionalidad()
+        public void CuandoVotanteConNacionalidadNoPermitidaSeIntentaRegistrarAccedientoAlMetodoPostVotanteEntoncesRetornaraInternalServerErrorEnHttpStatusCode()
         {
-            var votante = new
-            {
-                FechaDeNacimiento = DateTime.Now.AddYears(-30),
-                Nacionalidad = "Puertorricense"
-            };
+            // Arrange
+            Votante votanteNoPermitido = new VotanteTestDataBuilder().ConValoresPorDefecto().ConNacionalidad("Puertorricense").Construir();
+            
+            // Act
+            var c = this.TestClient.PostAsync(postVotantes, votanteNoPermitido, new JsonMediaTypeFormatter()).Result;
 
-            var c = this.TestClient.PostAsync(postVotantes, votante, new JsonMediaTypeFormatter()).Result;
-
+            // Assert
             Assert.AreEqual(HttpStatusCode.InternalServerError, c.StatusCode);
         }
     }
