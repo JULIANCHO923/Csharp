@@ -23,8 +23,11 @@ namespace RegistroVotantes.Dominio.PruebasUnitarias
         //Ejemplo de prueba unitaria mal construida
         public void EdadValida()
         {
+         // Arrange
             DateTime FechaDeNacimiento = DateTime.Now.AddYears(-20); 
+            // Act
             servicioValidacionVotante.TieneEdadMinimaPermitida(FechaDeNacimiento);
+            // Assert
             Assert.IsTrue(true);
         }
 

@@ -22,12 +22,12 @@ namespace RegistroVotantes.Dominio.Servicios
 
         public ServicioValidacionVotante(IGenericRepository<Votante> repo)
         {
-            Repo = repo;
+            this.Repo = repo;
         }
 
         public ServicioValidacionVotante(IGenericRepository<Votante> repo, ConstantesVotante constantes)
         {
-            Repo = repo;
+            this.Repo = repo;
             this.constantes = constantes;
         }
 
